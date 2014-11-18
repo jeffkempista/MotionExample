@@ -48,11 +48,13 @@ class ViewController: UIViewController {
     }
     
     func startMonitoringForAccelerometerUpdates() {
-        self.motionManager.accelerometerUpdateInterval = 0.01
-        self.motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue()) { (data, _) -> Void in
-            self.accelerationXLabel.text = "x: \(data.acceleration.x)"
-            self.accelerationYLabel.text = "y: \(data.acceleration.y)"
-            self.accelerationZLabel.text = "z: \(data.acceleration.z)"
+        if (self.motionManager.accelerometerAvailable) {
+            self.motionManager.accelerometerUpdateInterval = 0.01
+            self.motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue()) { (data, _) -> Void in
+                self.accelerationXLabel.text = "x: \(data.acceleration.x)"
+                self.accelerationYLabel.text = "y: \(data.acceleration.y)"
+                self.accelerationZLabel.text = "z: \(data.acceleration.z)"
+            }            
         }
     }
 
@@ -69,11 +71,13 @@ class ViewController: UIViewController {
     }
     
     func startMonitoringForGyroscopeUpdates() {
-        self.motionManager.gyroUpdateInterval = 0.01
-        self.motionManager.startGyroUpdatesToQueue(NSOperationQueue.mainQueue()) { (data, error) -> Void in
-            self.gyroXLabel.text = "x: \(data.rotationRate.x)"
-            self.gyroYLabel.text = "y: \(data.rotationRate.y)"
-            self.gyroZLabel.text = "z: \(data.rotationRate.z)"
+        if (self.motionManager.gyroAvailable) {
+            self.motionManager.gyroUpdateInterval = 0.01
+            self.motionManager.startGyroUpdatesToQueue(NSOperationQueue.mainQueue()) { (data, error) -> Void in
+                self.gyroXLabel.text = "x: \(data.rotationRate.x)"
+                self.gyroYLabel.text = "y: \(data.rotationRate.y)"
+                self.gyroZLabel.text = "z: \(data.rotationRate.z)"
+            }
         }
     }
     
