@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Accelerometer_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accelerometer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUO-GM-Gir">
+                                <rect key="frame" x="244" y="72" width="111.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QH7-7i-bzf">
+                                <rect key="frame" x="257" y="100" width="87" height="29"/>
+                                <segments>
+                                    <segment title="Stop"/>
+                                    <segment title="Start"/>
+                                </segments>
+                                <connections>
+                                    <action selector="startStopTapped:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Hex-lQ-miM"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctW-ji-RX3" userLabel="Accelerometer X Label">
+                                <rect key="frame" x="16" y="136" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="y: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0l-Px-veB" userLabel="Accelerometer Y Label">
+                                <rect key="frame" x="16" y="165" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="z: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlW-td-C4H" userLabel="Accelerometer Z Label">
+                                <rect key="frame" x="16" y="194" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gyroscope" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqc-xc-cEe">
+                                <rect key="frame" x="258" y="271" width="84" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kPF-UA-Xbn">
+                                <rect key="frame" x="257" y="299" width="87" height="29"/>
+                                <segments>
+                                    <segment title="Stop"/>
+                                    <segment title="Start"/>
+                                </segments>
+                                <connections>
+                                    <action selector="startStopGyroscope:" destination="vXZ-lx-hvc" eventType="valueChanged" id="9jI-8X-4Y6"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkB-ze-caT" userLabel="Gyro X Label">
+                                <rect key="frame" x="16" y="335" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="y: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ar-Ml-F8u" userLabel="Gyro Y Label">
+                                <rect key="frame" x="16" y="363.5" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="z: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srm-a2-Npb" userLabel="Gyro Z Label">
+                                <rect key="frame" x="16" y="392" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IkB-ze-caT" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="0ck-7w-aoX"/>
+                            <constraint firstItem="mlW-td-C4H" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="3tJ-IQ-ROC"/>
+                            <constraint firstItem="KUO-GM-Gir" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="52" id="5iu-8d-wWu"/>
+                            <constraint firstItem="5ar-Ml-F8u" firstAttribute="top" secondItem="IkB-ze-caT" secondAttribute="bottom" constant="8" id="6Jd-Jw-swM"/>
+                            <constraint firstItem="Srm-a2-Npb" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="C42-AV-Y1t"/>
+                            <constraint firstItem="kPF-UA-Xbn" firstAttribute="top" secondItem="pqc-xc-cEe" secondAttribute="bottom" constant="8" id="Fgw-FO-ann"/>
+                            <constraint firstItem="5ar-Ml-F8u" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="GDA-OK-ObB"/>
+                            <constraint firstItem="pqc-xc-cEe" firstAttribute="top" secondItem="mlW-td-C4H" secondAttribute="bottom" constant="56.5" id="GTm-16-UiJ"/>
+                            <constraint firstItem="QH7-7i-bzf" firstAttribute="top" secondItem="KUO-GM-Gir" secondAttribute="bottom" constant="8" id="LxB-TQ-Up6"/>
+                            <constraint firstItem="Srm-a2-Npb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="M7I-12-rCy"/>
+                            <constraint firstAttribute="centerX" secondItem="KUO-GM-Gir" secondAttribute="centerX" id="PBW-uh-yIK"/>
+                            <constraint firstAttribute="centerX" secondItem="QH7-7i-bzf" secondAttribute="centerX" constant="-0.5" id="YbY-f8-iAN"/>
+                            <constraint firstItem="ctW-ji-RX3" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ZCo-Qx-BFj"/>
+                            <constraint firstItem="mlW-td-C4H" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ZId-hb-Yl0"/>
+                            <constraint firstItem="M0l-Px-veB" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="b8a-hl-0qb"/>
+                            <constraint firstItem="IkB-ze-caT" firstAttribute="top" secondItem="kPF-UA-Xbn" secondAttribute="bottom" constant="8" id="bPA-PO-gS4"/>
+                            <constraint firstItem="M0l-Px-veB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="dwb-fi-8Ay"/>
+                            <constraint firstAttribute="centerX" secondItem="kPF-UA-Xbn" secondAttribute="centerX" constant="-0.5" id="hEG-SZ-jCo"/>
+                            <constraint firstAttribute="centerX" secondItem="pqc-xc-cEe" secondAttribute="centerX" constant="0.25" id="ljo-AB-dnS"/>
+                            <constraint firstItem="5ar-Ml-F8u" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="mer-Hr-oal"/>
+                            <constraint firstItem="ctW-ji-RX3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="npC-1k-if5"/>
+                            <constraint firstItem="mlW-td-C4H" firstAttribute="top" secondItem="M0l-Px-veB" secondAttribute="bottom" constant="8" id="q92-U7-8Fr"/>
+                            <constraint firstItem="IkB-ze-caT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="sDm-S0-UPP"/>
+                            <constraint firstItem="Srm-a2-Npb" firstAttribute="top" secondItem="5ar-Ml-F8u" secondAttribute="bottom" constant="8" id="uT1-aP-IV5"/>
+                            <constraint firstItem="ctW-ji-RX3" firstAttribute="top" secondItem="QH7-7i-bzf" secondAttribute="bottom" constant="8" id="z1B-uh-Loi"/>
+                            <constraint firstItem="M0l-Px-veB" firstAttribute="top" secondItem="ctW-ji-RX3" secondAttribute="bottom" constant="9" id="zDD-0j-G9p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accelerationXLabel" destination="ctW-ji-RX3" id="pSY-31-wbK"/>
+                        <outlet property="accelerationYLabel" destination="M0l-Px-veB" id="9aY-Nd-CWp"/>
+                        <outlet property="accelerationZLabel" destination="mlW-td-C4H" id="OnG-z4-xzX"/>
+                        <outlet property="gyroXLabel" destination="IkB-ze-caT" id="3jb-qb-dJk"/>
+                        <outlet property="gyroYLabel" destination="5ar-Ml-F8u" id="RUN-iu-LSi"/>
+                        <outlet property="gyroZLabel" destination="Srm-a2-Npb" id="SXf-1W-rIq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
